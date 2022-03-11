@@ -153,14 +153,15 @@ export default function Home() {
         <Name>About Me</Name>
         <div style={{ width: "70%" }}>
           <Description>
-            Hi! My name is Rich. I am from Taiwan but I am authorized to work in
+            Hi! My name is Rich. I'm from Taiwan and I am authorized to work in
             the US. I went to the Lidemy Mentor Program last year. Lidemy mentor
             program is an online bootcamp. I studied 40 hours a week for six
             months to become a developer.
             <br />
-            <br />I am now looking for a position like web developer. I love
-            coding and enjoy learning new things about it. I am also passionate
-            about solving problems.
+            <br />
+            Now I'm looking for a position like web developer. I love coding and
+            enjoy learning new things about it. I'm also passionate about
+            solving problems.
             <br />
             <br />
             Skill: React, Next.js, Express, Sequelize, MySQL.
