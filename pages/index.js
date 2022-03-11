@@ -1,20 +1,16 @@
 import Head from "next/head";
-import Link from "next/link";
-import { getSortedPostsData } from "../lib/posts";
-import Layout from "../components/layout";
 import { useRef, useEffect, useState } from "react";
 import { LiveCodeBtn, SourceCodeBtn } from "../components/Button";
 import {
   MeSection,
   Name,
-  GlobalStyle,
   DescContainer,
   Description,
   IntroContainer,
   SeeMoreBtn,
 } from "../components/home";
-
-import { Slide, Fade } from "react-awesome-reveal";
+import { GlobalStyle } from "../constant/GlobalStyle.js";
+import { Fade } from "react-awesome-reveal";
 import {
   ProjWrapper,
   Title,
@@ -22,6 +18,7 @@ import {
   ProjName,
   ProjDesc,
   ProjContent,
+  ImageWrapper,
 } from "../components/project";
 import Image from "next/image";
 import { AboutSection } from "../components/about";
@@ -104,21 +101,14 @@ export default function Home() {
                   Source Code
                 </SourceCodeBtn>
               </ProjDesc>
-              <div
-                style={{
-                  maxWidth: "100%",
-                  height: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
+              <ImageWrapper>
                 <Image
                   src="/images/2048.png"
                   height="200"
                   width="200"
                   alt="game 2048"
                 />
-              </div>
+              </ImageWrapper>
             </ProjContent>
           </ProjContainer>
           <ProjContainer>
@@ -146,21 +136,14 @@ export default function Home() {
                   Source Code
                 </SourceCodeBtn>
               </ProjDesc>
-              <div
-                style={{
-                  maxWidth: "30%",
-                  height: "100%",
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
+              <ImageWrapper>
                 <Image
                   src="/images/foodmap.png"
                   height="200"
                   width="200"
                   alt="food map"
                 />
-              </div>
+              </ImageWrapper>
             </ProjContent>
           </ProjContainer>
         </Fade>

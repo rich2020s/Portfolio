@@ -1,18 +1,5 @@
 import styled from "styled-components";
-import { createGlobalStyle } from "styled-components";
-import Link from "next/link";
-
-export const GlobalStyle = createGlobalStyle`
-html {
-  scroll-behavior: smooth;
-}
-body {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-`;
-
+import { MEDIA_QUERY } from "../../constant/mediaQuery.js";
 export const MeSection = styled.div`
   width: 100%;
   min-height: 100vh;
@@ -28,21 +15,37 @@ export const Name = styled.h1`
   margin-top: 2rem;
 `;
 export const IntroContainer = styled.div`
-  min-width: 768px;
   height: 60%;
+  min-width: 768px;
   display: flex;
   flex-direction: row;
+  ${MEDIA_QUERY.md} {
+    min-width: 480px;
+    min-width: 100%;
+  }
+  ${MEDIA_QUERY.sm} {
+    min-width: 100%;
+  }
 `;
 export const DescContainer = styled.div`
   width: 70%;
   height: 100%;
-  max-margin-left: 20px;
+  padding-left: 20px;
+  ${MEDIA_QUERY.md} {
+    min-width: 100%;
+  }
+  ${MEDIA_QUERY.sm} {
+    min-width: 100%;
+  }
 `;
 export const Description = styled.p`
+  display: flex;
+  display: flex;
   color: black;
   font-size: 30px;
   font-family: "Lato", sans-serif;
   line-height: 1.4;
+  margin-right: 0;
 `;
 export const SeeMoreBtn = styled.button`
   color: #f76e11;

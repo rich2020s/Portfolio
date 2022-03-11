@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { MEDIA_QUERY } from "../../constant/mediaQuery";
 import { Name } from "../home";
 
 export const ProjWrapper = styled.div`
@@ -24,6 +25,13 @@ export const ProjContainer = styled.div`
   :last-child {
     margin-bottom: 150px;
   }
+  ${MEDIA_QUERY.md} {
+    width: 100%;
+    padding: 0 20px;
+  }
+  ${MEDIA_QUERY.sm} {
+    // flex-direction: row;
+  }
 `;
 
 export const ProjName = styled(Title)`
@@ -37,10 +45,25 @@ export const ProjDesc = styled.p`
   max-width: 60%;
   font-family: "Lato", sans-serif;
   line-height: 1.4;
+  ${MEDIA_QUERY.sm} {
+    max-width: 100%;
+  }
 `;
 export const ProjContent = styled.div`
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${MEDIA_QUERY.sm} {
+    flex-direction: column;
+  }
+`;
+export const ImageWrapper = styled.div`
+  display: flex;
+  maxwidth: 100%;
+  height: 100%;
+  align-items: center;
+  ${MEDIA_QUERY.sm} {
+    margin-top: 100px;
+  }
 `;

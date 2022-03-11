@@ -5,4 +5,5 @@ export {
   ProjName,
   ProjDesc,
   ProjContent,
+  ImageWrapper,
 } from "./components";
