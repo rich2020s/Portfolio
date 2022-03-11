@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts";
 import Layout from "../components/layout";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { LiveCodeBtn, SourceCodeBtn } from "../components/Button";
 import {
   MeSection,
