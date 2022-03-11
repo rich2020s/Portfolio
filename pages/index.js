@@ -83,8 +83,8 @@ export default function Home() {
               <ProjDesc>
                 <p>
                   2048 is a game where you combine numbered tiles in order to
-                  gain a higher numbered tile. You can move the tiles by using
-                  arrow keys.
+                  gain a higher numbered tile. <br />
+                  You can move the tiles by using arrow keys.
                 </p>
                 <LiveCodeBtn
                   as="a"
@@ -118,8 +118,9 @@ export default function Home() {
                 <p>
                   The website allows users to blog about their favorite
                   restaurants and foods. Whenever users search for restaurants,
-                  it will display posts left by other users. Users can also find
-                  the nearby restaurants and their posts.(Mandarin)
+                  it will display posts left by other users. <br />
+                  Users can also find the nearby restaurants and their
+                  posts.(Mandarin)
                 </p>
                 <LiveCodeBtn
                   as="a"
@@ -152,7 +153,6 @@ export default function Home() {
         <Name>About Me</Name>
         <div style={{ width: "70%" }}>
           <Description>
-            {/* <p> */}
             Hi! My name is Rich. I am from Taiwan but I am authorized to work in
             the US. I went to the Lidemy Mentor Program last year. Lidemy mentor
             program is an online bootcamp. I studied 40 hours a week for six
@@ -167,7 +167,6 @@ export default function Home() {
           </Description>
         </div>
       </AboutSection>
-      {/* <ContactWrapper> */}
       <ProjWrapper>
         <Title>Contact Me</Title>
         <Description>Feel free to contact me anytime!</Description>

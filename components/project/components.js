@@ -38,7 +38,7 @@ export const ProjName = styled(Title)`
   font-size: 48px;
   margin-bottom: 20px;
 `;
-export const ProjDesc = styled.p`
+export const ProjDesc = styled.div`
   color: white;
   margin: 0;
   font-size: 30px;
