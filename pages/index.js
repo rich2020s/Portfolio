@@ -35,6 +35,11 @@ import {
 export default function Home() {
   const projRef = useRef(null);
   const ScrollToProj = () => projRef.current.scrollIntoView();
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+  if (isLoading) return;
   return (
     <>
       <Head>
