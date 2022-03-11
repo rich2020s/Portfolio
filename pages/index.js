@@ -101,7 +101,7 @@ export default function Home() {
               </ProjDesc>
               <div
                 style={{
-                  maxWidth: "30%",
+                  maxWidth: "100%",
                   height: "100%",
                   display: "flex",
                   alignItems: "center",
@@ -158,18 +158,6 @@ export default function Home() {
               </div>
             </ProjContent>
           </ProjContainer>
-          {/* <ProjContainer>
-            <ProjName as="h3">Proj1</ProjName>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              vestibulum aliquam ultrices. Duis non lacinia est. Donec et justo
-              est. Pellentesque elementum pharetra tellus, ut luctus lacus porta
-              mattis. Etiam ac lobortis odio. Integer sed gravida metus, vel
-              aliquam ligula. Cras tempor mollis est. Morbi ut dolor tristique,
-              aliquet nisi pretium, condimentum nulla. Nullam bibendum hendrerit
-              ante non euismod.
-            </p>
-          </ProjContainer> */}
         </Fade>
       </ProjWrapper>
       <AboutSection>
