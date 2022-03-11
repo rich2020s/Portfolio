@@ -39,7 +39,7 @@ export default function Home() {
   useEffect(() => {
     setIsLoading(false);
   }, []);
-  if (isLoading) return;
+  if (isLoading) return "";
   return (
     <>
       <Head>
