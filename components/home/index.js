@@ -1,5 +1,5 @@
 export {
-  Wrapper,
+  MeSection,
   Name,
   IntroContainer,
   GlobalStyle,

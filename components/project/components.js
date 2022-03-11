@@ -16,15 +16,31 @@ export const Title = styled(Name)`
 `;
 export const ProjContainer = styled.div`
   width: 80%;
-  height: 400px;
+  min-height: 300px;
   color: white;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  :last-child {
+    margin-bottom: 150px;
+  }
 `;
+
 export const ProjName = styled(Title)`
   font-size: 48px;
+  margin-bottom: 20px;
 `;
 export const ProjDesc = styled.p`
   color: white;
+  margin: 0;
   font-size: 30px;
+  max-width: 60%;
   font-family: "Lato", sans-serif;
   line-height: 1.4;
+`;
+export const ProjContent = styled.div`
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;

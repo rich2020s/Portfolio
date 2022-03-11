@@ -13,7 +13,7 @@ body {
 }
 `;
 
-export const Wrapper = styled.div`
+export const MeSection = styled.div`
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -36,28 +36,13 @@ export const IntroContainer = styled.div`
 export const DescContainer = styled.div`
   width: 70%;
   height: 100%;
-  // border: 1px solid white;
+  max-margin-left: 20px;
 `;
 export const Description = styled.p`
   color: black;
   font-size: 30px;
   font-family: "Lato", sans-serif;
   line-height: 1.4;
-`;
-export const LinksContainer = styled.div`
-  width: 30%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
-export const WebsitesLink = styled.a`
-  color: black;
-  background-color: transparent;
-  :hover {
-    cursor: pointer;
-  }
 `;
 export const SeeMoreBtn = styled.button`
   color: #f76e11;

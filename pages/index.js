@@ -3,39 +3,38 @@ import Link from "next/link";
 import { getSortedPostsData } from "../lib/posts";
 import Layout from "../components/layout";
 import { useRef, useEffect } from "react";
+import { LiveCodeBtn, SourceCodeBtn } from "../components/Button";
 import {
-  Wrapper,
+  MeSection,
   Name,
   GlobalStyle,
   DescContainer,
   Description,
-  WebsitesLink,
   IntroContainer,
-  LinksContainer,
   SeeMoreBtn,
 } from "../components/home";
+
 import { Slide, Fade } from "react-awesome-reveal";
 import {
   ProjWrapper,
   Title,
   ProjContainer,
   ProjName,
+  ProjDesc,
+  ProjContent,
 } from "../components/project";
 import Image from "next/image";
-// export async function getStaticProps() {
-//   const allPostsData = getSortedPostsData();
-//   return {
-//     props: {
-//       allPostsData,
-//     },
-//   };
-// }
+import { AboutSection } from "../components/about";
+import {
+  ContactForm,
+  WebsitesLink,
+  LinksContainer,
+  ContactWrapper,
+} from "../components/contact";
 
 export default function Home() {
   const projRef = useRef(null);
   const ScrollToProj = () => projRef.current.scrollIntoView();
-  // const useMountEffect = (ScrollToProj) => useEffect(ScrollToProj, []);
-  // useMountEffect(ScrollToProj);
   return (
     <>
       <Head>
@@ -52,7 +51,7 @@ export default function Home() {
         />
       </Head>
       <GlobalStyle />
-      <Wrapper>
+      <MeSection>
         <IntroContainer>
           <DescContainer>
             <Fade
@@ -65,46 +64,101 @@ export default function Home() {
               <Name>Rich Chan</Name>
               <Description>
                 Hello there! I am Rich.
-                <br />A self-taught web developer.
+                <br />
+                This is my portfolio website.
               </Description>
               <SeeMoreBtn onClick={ScrollToProj}>see more</SeeMoreBtn>
             </Fade>
           </DescContainer>
-          {/* <LinksContainer>
-            {/* <WebsitesLink href="https://github.com/rich2020s" target="_blank">
-              <Image
-                src="/images/github-brands.svg"
-                height="48"
-                width="48"
-                alt="GitHub"
-              />
-            </WebsitesLink>
-            <br />
-            <WebsitesLink
-              href="https://www.linkedin.com/in/rich-chan-3a4815229/"
-              target="_blank"
-            >
-              <Image
-                src="/images/linkedin-brands.svg"
-                height="48"
-                width="48"
-                alt="linkedIn"
-              />
-            </WebsitesLink> */}
-          {/* <button onClick={ScrollToProj}>see more</button> */}
-          {/* </LinksContainer> */}
         </IntroContainer>
-      </Wrapper>
+      </MeSection>
       <ProjWrapper ref={projRef}>
         <Title>Projects</Title>
-        <Fade
-          triggerOnce={true}
-          direction="left"
-          delay={300}
-          cascade={true}
-          damping={0.5}
-        >
+        <Fade triggerOnce={true} direction="left" delay={300}>
           <ProjContainer>
+            <ProjName as="h3">2048</ProjName>
+            <ProjContent>
+              <ProjDesc>
+                <p>
+                  2048 is a game where you combine numbered tiles in order to
+                  gain a higher numbered tile. You can move the tiles by using
+                  arrow keys.
+                </p>
+                <LiveCodeBtn
+                  as="a"
+                  target="_blank"
+                  href="https://zealous-perlman-f4781c.netlify.app/"
+                >
+                  Live code
+                </LiveCodeBtn>
+                <SourceCodeBtn
+                  as="a"
+                  target="_blank"
+                  href="https://github.com/rich2020s/2048"
+                >
+                  Source Code
+                </SourceCodeBtn>
+              </ProjDesc>
+              <div
+                style={{
+                  maxWidth: "30%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  src="/images/2048.png"
+                  height="200"
+                  width="200"
+                  alt="game 2048"
+                />
+              </div>
+            </ProjContent>
+          </ProjContainer>
+          <ProjContainer>
+            <ProjName as="h3">Food map</ProjName>
+            <ProjContent>
+              <ProjDesc>
+                <p>
+                  The website allows users to blog about their favorite
+                  restaurants and foods. Whenever users search for restaurants,
+                  it will display posts left by other users. Users can also find
+                  the nearby restaurants and their posts.(Mandarin)
+                </p>
+                <LiveCodeBtn
+                  as="a"
+                  target="_blank"
+                  href="https://api.outshaker.tw/#/home"
+                >
+                  Live code
+                </LiveCodeBtn>
+                <SourceCodeBtn
+                  as="a"
+                  target="_blank"
+                  href="https://github.com/chachachater/foodmap"
+                >
+                  Source Code
+                </SourceCodeBtn>
+              </ProjDesc>
+              <div
+                style={{
+                  maxWidth: "30%",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Image
+                  src="/images/foodmap.png"
+                  height="200"
+                  width="200"
+                  alt="food map"
+                />
+              </div>
+            </ProjContent>
+          </ProjContainer>
+          {/* <ProjContainer>
             <ProjName as="h3">Proj1</ProjName>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
@@ -115,44 +169,56 @@ export default function Home() {
               aliquet nisi pretium, condimentum nulla. Nullam bibendum hendrerit
               ante non euismod.
             </p>
-          </ProjContainer>
-          <ProjContainer>
-            <ProjName as="h3">Proj1</ProjName>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              vestibulum aliquam ultrices. Duis non lacinia est. Donec et justo
-              est. Pellentesque elementum pharetra tellus, ut luctus lacus porta
-              mattis. Etiam ac lobortis odio. Integer sed gravida metus, vel
-              aliquam ligula. Cras tempor mollis est. Morbi ut dolor tristique,
-              aliquet nisi pretium, condimentum nulla. Nullam bibendum hendrerit
-              ante non euismod.
-            </p>
-          </ProjContainer>
-          <ProjContainer>
-            <ProjName as="h3">Proj1</ProjName>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              vestibulum aliquam ultrices. Duis non lacinia est. Donec et justo
-              est. Pellentesque elementum pharetra tellus, ut luctus lacus porta
-              mattis. Etiam ac lobortis odio. Integer sed gravida metus, vel
-              aliquam ligula. Cras tempor mollis est. Morbi ut dolor tristique,
-              aliquet nisi pretium, condimentum nulla. Nullam bibendum hendrerit
-              ante non euismod.
-            </p>
-          </ProjContainer>
-          <ProjContainer>
-            <ProjName as="h3">Proj1</ProjName>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              vestibulum aliquam ultrices. Duis non lacinia est. Donec et justo
-              est. Pellentesque elementum pharetra tellus, ut luctus lacus porta
-              mattis. Etiam ac lobortis odio. Integer sed gravida metus, vel
-              aliquam ligula. Cras tempor mollis est. Morbi ut dolor tristique,
-              aliquet nisi pretium, condimentum nulla. Nullam bibendum hendrerit
-              ante non euismod.
-            </p>
-          </ProjContainer>
+          </ProjContainer> */}
         </Fade>
+      </ProjWrapper>
+      <AboutSection>
+        <Name>About Me</Name>
+        <div style={{ width: "70%" }}>
+          <Description>
+            {/* <p> */}
+            Hi! My name is Rich. I am from Taiwan but I am authorized to work in
+            the US. I went to the Lidemy Mentor Program last year. Lidemy mentor
+            program is an online bootcamp. I studied 40 hours a week for six
+            months to become a developer.
+            <br />
+            <br />I am now looking for a position like web developer. I love
+            coding and enjoy learning new things about it. I am also passionate
+            about solving problems.
+            <br />
+            <br />
+            Skill: React, Next.js, Express, Sequelize, MySQL.
+          </Description>
+        </div>
+      </AboutSection>
+      {/* <ContactWrapper> */}
+      <ProjWrapper>
+        <Title>Contact Me</Title>
+        <Description>Feel free to contact me anytime!</Description>
+        <LinksContainer>
+          <WebsitesLink href="https://github.com/rich2020s" target="_blank">
+            <Image
+              src="/images/github-brands.svg"
+              height="48"
+              width="48"
+              alt="GitHub"
+            />
+          </WebsitesLink>
+          <br />
+          <WebsitesLink
+            href="https://www.linkedin.com/in/rich-chan-3a4815229/"
+            target="_blank"
+          >
+            <Image
+              src="/images/linkedin-brands.svg"
+              height="48"
+              width="48"
+              alt="linkedIn"
+            />
+          </WebsitesLink>
+        </LinksContainer>
+        <ContactForm />
+        {/* </ContactWrapper> */}
       </ProjWrapper>
     </>
   );
