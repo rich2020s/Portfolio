@@ -20,6 +20,7 @@ export const ProjContainer = styled.div`
   min-height: 300px;
   color: white;
   margin: 40px auto;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   :last-child {
