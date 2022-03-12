@@ -10,7 +10,7 @@ import {
   SeeMoreBtn,
 } from "../components/home";
 import { GlobalStyle } from "../constant/GlobalStyle.js";
-import { Fade } from "react-awesome-reveal";
+import { Fade, AttentionSeeker } from "react-awesome-reveal";
 import {
   ProjWrapper,
   Title,
@@ -21,7 +21,7 @@ import {
   ImageWrapper,
 } from "../components/project";
 import Image from "next/image";
-import { AboutSection } from "../components/about";
+import { AboutSection, AboutMe } from "../components/about";
 import {
   ContactForm,
   WebsitesLink,
@@ -66,8 +66,7 @@ export default function Home() {
               <Name>Rich Chan</Name>
               <Description>
                 Hello there! I am Rich.
-                <br />
-                This is my portfolio website.
+                <br />I am a self-drive web developer.
               </Description>
               <SeeMoreBtn onClick={ScrollToProj}>see more</SeeMoreBtn>
             </Fade>
@@ -76,31 +75,37 @@ export default function Home() {
       </MeSection>
       <ProjWrapper ref={projRef}>
         <Title>Projects</Title>
-        <Fade triggerOnce={true} direction="left" delay={300}>
-          <ProjContainer>
+        <ProjContainer>
+          <Fade triggerOnce={true} direction="left" delay={300}>
             <ProjName as="h3">2048</ProjName>
-            <ProjContent>
-              <ProjDesc>
+          </Fade>
+          <ProjContent>
+            <ProjDesc>
+              <Fade triggerOnce={true} direction="left" delay={600}>
                 <p>
                   2048 is a game where you combine numbered tiles in order to
                   gain a higher numbered tile. <br />
                   You can move the tiles by using arrow keys.
                 </p>
-                <LiveCodeBtn
-                  as="a"
-                  target="_blank"
-                  href="https://zealous-perlman-f4781c.netlify.app/"
-                >
-                  Live code
-                </LiveCodeBtn>
-                <SourceCodeBtn
-                  as="a"
-                  target="_blank"
-                  href="https://github.com/rich2020s/2048"
-                >
-                  Source Code
-                </SourceCodeBtn>
-              </ProjDesc>
+                <div>
+                  <LiveCodeBtn
+                    as="a"
+                    target="_blank"
+                    href="https://zealous-perlman-f4781c.netlify.app/"
+                  >
+                    Live code
+                  </LiveCodeBtn>
+                  <SourceCodeBtn
+                    as="a"
+                    target="_blank"
+                    href="https://github.com/rich2020s/2048"
+                  >
+                    Source Code
+                  </SourceCodeBtn>
+                </div>
+              </Fade>
+            </ProjDesc>
+            <Fade triggerOnce={true} direction="right" delay={900}>
               <ImageWrapper>
                 <Image
                   src="/images/2048.png"
@@ -109,12 +114,16 @@ export default function Home() {
                   alt="game 2048"
                 />
               </ImageWrapper>
-            </ProjContent>
-          </ProjContainer>
-          <ProjContainer>
+            </Fade>
+          </ProjContent>
+        </ProjContainer>
+        <ProjContainer>
+          <Fade triggerOnce={true} direction="left" delay={1200}>
             <ProjName as="h3">Food map</ProjName>
-            <ProjContent>
-              <ProjDesc>
+          </Fade>
+          <ProjContent>
+            <ProjDesc>
+              <Fade triggerOnce={true} direction="left" delay={1200}>
                 <p>
                   The website allows users to blog about their favorite
                   restaurants and foods. Whenever users search for restaurants,
@@ -122,21 +131,25 @@ export default function Home() {
                   Users can also find the nearby restaurants and their
                   posts.(Mandarin)
                 </p>
-                <LiveCodeBtn
-                  as="a"
-                  target="_blank"
-                  href="https://api.outshaker.tw/#/home"
-                >
-                  Live code
-                </LiveCodeBtn>
-                <SourceCodeBtn
-                  as="a"
-                  target="_blank"
-                  href="https://github.com/chachachater/foodmap"
-                >
-                  Source Code
-                </SourceCodeBtn>
-              </ProjDesc>
+                <div>
+                  <LiveCodeBtn
+                    as="a"
+                    target="_blank"
+                    href="https://api.outshaker.tw/#/home"
+                  >
+                    Live code
+                  </LiveCodeBtn>
+                  <SourceCodeBtn
+                    as="a"
+                    target="_blank"
+                    href="https://github.com/chachachater/foodmap"
+                  >
+                    Source Code
+                  </SourceCodeBtn>
+                </div>
+              </Fade>
+            </ProjDesc>
+            <Fade triggerOnce={true} direction="right" delay={1500}>
               <ImageWrapper>
                 <Image
                   src="/images/foodmap.png"
@@ -145,32 +158,40 @@ export default function Home() {
                   alt="food map"
                 />
               </ImageWrapper>
-            </ProjContent>
-          </ProjContainer>
-        </Fade>
+            </Fade>
+          </ProjContent>
+        </ProjContainer>
       </ProjWrapper>
       <AboutSection>
-        <Name>About Me</Name>
-        <div style={{ width: "70%" }}>
-          <Description>
-            Hi! My name is Rich. I'm from Taiwan and I am authorized to work in
-            the US. I went to the Lidemy Mentor Program last year. Lidemy mentor
-            program is an online bootcamp. I studied 40 hours a week for six
-            months to become a developer.
-            <br />
-            <br />
-            Now I'm looking for a position like web developer. I love coding and
-            enjoy learning new things about it. I'm also passionate about
-            solving problems.
-            <br />
-            <br />
-            Skill: React, Next.js, Express, Sequelize, MySQL.
-          </Description>
+        <AboutMe>About Me</AboutMe>
+        <div
+          style={{
+            width: "70%",
+            maxWidth: "768px",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Fade triggerOnce={true} direction={"up"} delay={900}>
+            <Description>
+              Hi! My name is Rich. I'm from Taiwan and I am authorized to work
+              in the US. I went to the bootcamp last year. I have learned many
+              techniques like jQuery, php and JavaScript. We also learned using
+              React to build a website.
+              <br />
+              <br />
+              After the bootcamp, I keep learning myself. Using new tools to
+              build website like Next.js.
+              <br />
+              <br />
+              My Skill: React, Next.js, Express, Sequelize, MySQL.
+            </Description>
+          </Fade>
         </div>
       </AboutSection>
       <ProjWrapper>
         <Title>Contact Me</Title>
-        <Description>Feel free to contact me anytime!</Description>
+        <Description>Please feel free to contact me at any time.</Description>
         <LinksContainer>
           <WebsitesLink href="https://github.com/rich2020s" target="_blank">
             <Image
@@ -194,7 +215,6 @@ export default function Home() {
           </WebsitesLink>
         </LinksContainer>
         <ContactForm />
-        {/* </ContactWrapper> */}
       </ProjWrapper>
     </>
   );

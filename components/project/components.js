@@ -14,6 +14,7 @@ export const ProjWrapper = styled.div`
 `;
 export const Title = styled(Name)`
   color: white;
+  margin-top: 80px;
 `;
 export const ProjContainer = styled.div`
   width: 80%;
@@ -61,7 +62,7 @@ export const ProjContent = styled.div`
 `;
 export const ImageWrapper = styled.div`
   display: flex;
-  maxwidth: 100%;
+  width: 100%;
   height: 100%;
   align-items: center;
   ${MEDIA_QUERY.sm} {

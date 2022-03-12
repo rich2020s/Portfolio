@@ -1,1 +1,1 @@
-export { AboutSection } from "./components";
+export { AboutSection, AboutMe } from "./components";

@@ -12,7 +12,6 @@ export const Name = styled.h1`
   font-weight: bold;
   font-size: 60px;
   font-family: "Ubuntu", sans-serif;
-  margin-top: 2rem;
 `;
 export const IntroContainer = styled.div`
   height: 60%;
