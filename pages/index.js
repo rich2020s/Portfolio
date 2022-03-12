@@ -175,9 +175,9 @@ export default function Home() {
           <Fade triggerOnce={true} direction={"up"} delay={900}>
             <Description>
               Hi! My name is Rich. I'm from Taiwan and I am authorized to work
-              in the US. I went to the bootcamp last year. I have learned many
-              techniques like jQuery, php and JavaScript. We also learned using
-              React to build a website.
+              in the US. I went to the bootcamp, Lidemy Mentor Program, last
+              year. I have learned jQuery, HTML, CSS and JavaScript. I also
+              learned how to use React to build a website.
               <br />
               <br />
               After the bootcamp, I keep learning myself. Using new tools to
