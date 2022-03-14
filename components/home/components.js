@@ -9,9 +9,10 @@ export const MeSection = styled.div`
 `;
 export const Name = styled.h1`
   color: #f76e11;
-  font-weight: bold;
   font-size: 60px;
   font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-style: italic;
 `;
 export const IntroContainer = styled.div`
   height: 60%;

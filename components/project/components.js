@@ -15,6 +15,9 @@ export const ProjWrapper = styled.div`
 export const Title = styled(Name)`
   color: white;
   margin-top: 80px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-style: italic;
 `;
 export const ProjContainer = styled.div`
   width: 80%;

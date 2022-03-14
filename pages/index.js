@@ -10,7 +10,7 @@ import {
   SeeMoreBtn,
 } from "../components/home";
 import { GlobalStyle } from "../constant/GlobalStyle.js";
-import { Fade, AttentionSeeker } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import {
   ProjWrapper,
   Title,
@@ -26,7 +26,6 @@ import {
   ContactForm,
   WebsitesLink,
   LinksContainer,
-  ContactWrapper,
 } from "../components/contact";
 
 export default function Home() {
@@ -42,13 +41,9 @@ export default function Home() {
       <Head>
         <title>Rich Chan portfolio</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Ubuntu:ital@1&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -180,8 +175,8 @@ export default function Home() {
               also know how to use React to build a website.
               <br />
               <br />
-              After the bootcamp, I keep learning myself. Using new tools to
-              build website like Next.js.
+              After the bootcamp, I keep learning myself. Using new tools like
+              Next.js to build website .
               <br />
               <br />
               My Skill: React, Next.js, Express, Sequelize, MySQL.
@@ -191,7 +186,7 @@ export default function Home() {
       </AboutSection>
       <ProjWrapper>
         <Title>Contact Me</Title>
-        <Description>Please feel free to contact me at any time.</Description>
+        <Description>Please feel free to contact me any time.</Description>
         <LinksContainer>
           <WebsitesLink href="https://github.com/rich2020s" target="_blank">
             <Image
