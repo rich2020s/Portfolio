@@ -40,6 +40,7 @@ export default function Home() {
     <>
       <Head>
         <title>Rich Chan portfolio</title>
+        <link rel="shortcut icon" href="/images/wave.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
